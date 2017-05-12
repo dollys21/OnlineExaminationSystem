@@ -1,3 +1,6 @@
+<logout logout-url="/logout" invalidate-session="true" delete-cookies="true" />
+
+
 @RequestMapping(value = "/logout", method = RequestMethod.GET)
 public String logout(HttpServletRequest request) {
     HttpSession session = request.getSession(false);
