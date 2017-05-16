@@ -1,1 +1,5 @@
-http://www.asos.com/asos/asos-dobby-mesh-one-shoulder-prom-dress/prd/7733969?iid=7733969&clr=Yellow&cid=16264&pgesize=36&pge=0&totalstyles=216&gridsize=3&gridrow=1&gridcolumn=1
+private Feedback getFeedbackbyuser(String userName){
+Query query = session.createQuery("from lpfeedback where user = :userName ");
+query.setParameter("userName", "7277");
+List list = query.list();
+}
