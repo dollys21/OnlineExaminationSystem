@@ -1,5 +1,10 @@
 @Override
 	public List<LPFeedback> getFeedbackByUsername(String username) {
 		
-		return getSessionFactory().getCurrentSession().createQuery("from LPFeedback").list();
+		Query query= getSessionFactory().getCurrentSession().createQuery("from LPFeedback where user=:userName");
+		
+		query.setParameter("userName", username);
+		List list = query.list();
+		return list;
+		
 	}
